@@ -3,14 +3,13 @@ def user_input():
     register = int(input("Ingrese el número de registros que desea consultar: "))
 
     return department, register
-
 def display_data(filtered_df):
     for index, row in filtered_df.iterrows():
-        print("Ciudad: {0}, Departamento: {1}, Edad: {2}, sexo: {3}, Estado: {4}, Tipo de contagio: {5}".format(
+        print("Ciudad: {0}, Departamento: {1}, Edad: {2}, Tipo de contagio: {3}, Estado: {4}, Recuperado: {5}".format(
             row['ciudad_municipio_nom'],
             row['departamento_nom'],
             row['edad'],
-            row['sexo'],
+            row['fuente_tipo_contagio'],
             row['estado'],
-            row['fuente_tipo_contagio']
+            row['recuperado']
         ))

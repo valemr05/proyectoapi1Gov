@@ -3,7 +3,7 @@ from sodapy import Socrata
 
 
 def get_client():
-    client = Socrata("www.datos.gov.co", None)
+    client = Socrata("www.datos.gov.co", "aLhzYIB1v3AjOH6WQU6PaXv4H")
 
     return client
 
@@ -20,9 +20,9 @@ def filter_data(results_df):
         "ciudad_municipio_nom", 
         "departamento_nom", 
         "edad", 
-        "sexo", 
+        "fuente_tipo_contagio",
         "estado", 
-        "fuente_tipo_contagio"
+        "recuperado"
     ]
     filtered_df = results_df[columns_to_display]
 
