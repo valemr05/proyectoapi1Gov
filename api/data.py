@@ -24,6 +24,8 @@ def filter_data(results_df):
         "estado", 
         "recuperado"
     ]
-    filtered_df = results_df[columns_to_display]
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
+    return results_df[columns_to_display]
 
-    return filtered_df
+    
